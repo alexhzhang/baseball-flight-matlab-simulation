@@ -29,21 +29,15 @@ This project implements a full numerical simulation of a baseball’s 2D flight 
 
 This project models a baseball as a point mass acted on by two forces:
 
-### **• Gravity**
-
+### • Gravity
 The constant downward force:
-[
-F_g = -mg
-]
+  
+`F_g = -m g`
 
-### **• Aerodynamic Drag**
-
+### • Aerodynamic Drag
 A velocity-dependent force opposing the direction of motion:
-[
-F_d = -\tfrac{1}{2} C, \rho, A, v^2
-]
 
-Where:
+`F_d = -(1/2) * C * ρ * A * v^2`
 
 * **C** — drag coefficient (user input)
 * **ρ** — air density
