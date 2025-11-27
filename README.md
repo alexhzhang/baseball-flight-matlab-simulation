@@ -25,28 +25,32 @@ This project implements a full numerical simulation of a baseball’s 2D flight 
 
 ---
 
-## 🧠 **Physics & Modeling**
+# 🧠 **Physics & Modeling**
 
-The baseball is modeled as a point mass with forces:
+This project models a baseball as a point mass acted on by two forces:
 
-* **Gravity:**
-  [
-  F_g = -mg
-  ]
+### **• Gravity**
 
-* **Aerodynamic Drag:**
-  [
-  \vec F_d = -\tfrac{1}{2} C \rho A v, \vec v
-  ]
+The constant downward force:
+[
+F_g = -mg
+]
 
-where
+### **• Aerodynamic Drag**
 
-* ( C ) = drag coefficient (user input)
-* ( \rho ) = air density
-* ( A ) = cross-sectional area of the ball
-* ( v ) = instantaneous speed
+A velocity-dependent force opposing the direction of motion:
+[
+F_d = -\tfrac{1}{2} C, \rho, A, v^2
+]
 
-The simulation integrates the coupled ODEs for horizontal and vertical motion using a forward-Euler method with velocity-dependent acceleration.
+Where:
+
+* **C** — drag coefficient (user input)
+* **ρ** — air density
+* **A** — cross-sectional area of the baseball
+* **v** — instantaneous speed (magnitude of velocity vector)
+
+The drag force is decomposed into x- and y-components based on the current velocity direction.
 
 ---
 
